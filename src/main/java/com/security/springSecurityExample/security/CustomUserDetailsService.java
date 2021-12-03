@@ -18,8 +18,9 @@ import com.security.springSecurityExample.repository.UsersRepo;
  * 
  * @author memorykghs
  */
-@Component
-public class CustomUserDetailsService implements UserDetailsService{
+//@Component
+public class CustomUserDetailsService implements UserDetailsService {
+
 	/** UsersRepo */
 	@Autowired
 	private UsersRepo usersRepo;
@@ -35,13 +36,12 @@ public class CustomUserDetailsService implements UserDetailsService{
 //		for (UserRole role : user.getUserRoles()) {
 //			authorities.add(new SimpleGrantedAuthority(role.getRole()));
 //		}
-		
+
 		UserDetails userDetails = User.builder()
 				.username(user.getUserName())
 				.password(user.getPassword())
 				.build();
-		
-		return userDetails;
 
+		return userDetails;
 	}
 }

@@ -2,6 +2,7 @@ package com.security.springSecurityExample.config;
 
 import javax.sql.DataSource;
 
+import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
@@ -23,6 +24,8 @@ public class DataSourceConfig {
 
 	@Value("${DBUrl}")
 	private String dataSourceUrl;
+	
+	private Logger logger = Logger.getLogger(getClass().getName());
 
 	@Bean("localDataSource")
 	@Primary
