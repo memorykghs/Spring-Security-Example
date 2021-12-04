@@ -19,24 +19,24 @@ import com.zaxxer.hikari.HikariDataSource;
  * 
  * @author memorykghs
  */
-@Configuration
-public class DataSourceConfig {
-
-	@Value("${DBUrl}")
-	private String dataSourceUrl;
-	
-	private Logger logger = Logger.getLogger(getClass().getName());
-
-	@Bean("localDataSource")
-	@Primary
-//	@Profile("local")
-	public DataSource getLocalDataSource() {
-		return DataSourceBuilder
-				.create()
-				.type(HikariDataSource.class) // HikariCP
-				.username("root")
-				.password("Ashley2020")
-				.url(dataSourceUrl)
-				.build();
-	}
-}
+//@Configuration
+//public class DataSourceConfig {
+//
+//	@Value("${DBUrl}")
+//	private String dataSourceUrl;
+//	
+//	private Logger logger = Logger.getLogger(getClass().getName());
+//
+//	@Bean("localDataSource")
+//	@Primary
+////	@Profile("local")
+//	public DataSource getLocalDataSource() {
+//		return DataSourceBuilder
+//				.create()
+//				.type(HikariDataSource.class) // HikariCP
+//				.username("root")
+//				.password("Ashley2020")
+//				.url(dataSourceUrl)
+//				.build();
+//	}
+//}
